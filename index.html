@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#11100e">
+<title>NOUR | Clothing Brand</title>
+<style>
+:root{--bg:#11100e;--panel:#1a1815;--cream:#e9dfcf;--muted:#b9ad9b;--gold:#c9b28d;--line:#39332b}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--cream);font-family:Arial,Tahoma,sans-serif}button,input,select{font:inherit}button{cursor:pointer}.wrap{width:min(1160px,92%);margin:auto}
+header{position:sticky;top:0;z-index:10;background:#11100eef;backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 0}.brand{display:flex;align-items:center;gap:10px}.brand img{width:42px;height:42px;object-fit:cover;border-radius:50%;border:1px solid var(--gold)}.brand b{letter-spacing:4px;font-family:Georgia,serif;font-size:21px}.brand small{display:block;color:var(--muted);font-size:9px;letter-spacing:2px;margin-top:3px}
+.actions{display:flex;gap:8px;align-items:center}.btn{border:1px solid var(--gold);background:transparent;color:var(--cream);padding:10px 13px;border-radius:3px}.btn.primary{background:var(--cream);color:#17130f;border-color:var(--cream);font-weight:bold}.btn:hover{opacity:.85}.lang{min-width:48px}
+.hero{padding:55px 0 45px;display:grid;grid-template-columns:1.1fr .9fr;gap:35px;align-items:center}.eyebrow{letter-spacing:3px;color:var(--gold);font-size:11px}.hero h1{font:clamp(38px,6vw,72px)/1.12 Georgia,serif;margin:16px 0}.hero p{color:var(--muted);line-height:1.9;max-width:520px}.hero-visual{min-height:340px;background:linear-gradient(145deg,#d9cbb7,#9d8a73);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;border:1px solid #76634d}.hero-visual img{width:82%;max-width:360px;mix-blend-mode:multiply;opacity:.9;box-shadow:0 20px 55px #251d1630}.seal{position:absolute;bottom:17px;left:17px;color:#211b15;border:1px solid #342a20;padding:9px 12px;font-size:10px;letter-spacing:2px}
+.section-head{display:flex;align-items:end;justify-content:space-between;gap:15px;margin:20px 0}.section-head h2{font:32px Georgia,serif;margin:0}.section-head p{color:var(--muted);font-size:13px}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin:20px 0}.filter{border:1px solid var(--line);color:var(--muted);background:transparent;padding:9px 13px}.filter.active{background:var(--cream);color:#17130f;border-color:var(--cream)}
+.products{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.product{background:var(--panel);border:1px solid var(--line);padding:10px;min-width:0}.product-art{aspect-ratio:4/4.7;background:linear-gradient(150deg,#3b352d,#151311);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}.product-art svg{width:78%;height:84%;filter:drop-shadow(0 20px 16px #0008)}.tag{position:absolute;top:10px;right:10px;background:var(--cream);color:#17130f;font-size:10px;padding:6px 8px}.product h3{font-size:15px;margin:13px 2px 7px}.product .desc{font-size:12px;color:var(--muted);margin:0 2px 12px;min-height:28px}.product-bottom{display:flex;justify-content:space-between;align-items:center;gap:8px}.price{font-weight:bold;color:var(--gold)}.add{border:1px solid var(--gold);background:transparent;color:var(--cream);padding:8px 10px;font-size:12px}
+.info{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:48px 0}.info article{border:1px solid var(--line);padding:18px}.info b{display:block;margin-bottom:8px}.info p{font-size:12px;line-height:1.8;color:var(--muted);margin:0}
+footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-size:12px}.footer-row{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+.cart-fab{position:fixed;bottom:18px;left:18px;z-index:20;background:var(--cream);color:#17130f;border:0;padding:13px 17px;box-shadow:0 8px 25px #0007;font-weight:bold}.cart-count{display:inline-flex;background:#17130f;color:var(--cream);border-radius:50%;min-width:21px;height:21px;align-items:center;justify-content:center;margin-inline-start:6px;font-size:11px}
+.modal{display:none;position:fixed;inset:0;background:#000b;z-index:30;align-items:flex-end;justify-content:center}.modal.open{display:flex}.sheet{background:#171512;border:1px solid var(--gold);width:min(600px,100%);max-height:90vh;overflow:auto;padding:22px}.sheet-head{display:flex;justify-content:space-between;align-items:center}.sheet h2{font-family:Georgia,serif}.close{background:none;border:0;color:var(--cream);font-size:26px}.cart-line{display:grid;grid-template-columns:1fr auto auto;gap:10px;align-items:center;border-bottom:1px solid var(--line);padding:12px 0;font-size:13px}.qty{display:flex;align-items:center;gap:8px}.qty button{background:transparent;color:var(--cream);border:1px solid var(--line);padding:3px 8px}.field{display:grid;gap:6px;margin:12px 0}.field label{font-size:12px;color:var(--muted)}.field input,.field select{background:#0f0e0c;color:var(--cream);border:1px solid var(--line);padding:12px;width:100%;border-radius:2px}.checkout{width:100%;margin-top:12px;padding:14px;background:var(--cream);color:#17130f;border:0;font-weight:bold}.note{font-size:11px;color:var(--muted);line-height:1.7}
+@media(max-width:720px){.hero{grid-template-columns:1fr;padding-top:35px;gap:22px}.hero-visual{min-height:260px}.products{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.product{padding:7px}.product h3{font-size:13px}.product .desc{font-size:11px}.add{padding:8px 7px}.info{grid-template-columns:1fr;margin:30px 0}.section-head h2{font-size:26px}.brand b{font-size:17px}.brand img{width:36px;height:36px}.actions .btn{padding:8px 9px;font-size:12px}}
+@media(max-width:380px){.products{grid-template-columns:1fr}.product-art{aspect-ratio:4/3}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+  <div class="brand"><img src="nour-logo.jpg" alt="NOUR logo"><div><b>NOUR</b><small>CLOTHING BRAND</small></div></div>
+  <div class="actions"><button class="btn lang" id="langBtn">EN</button><a class="btn" href="#products" data-i="shop">تسوق الآن</a></div>
+</div></header>
+<main class="wrap">
+<section class="hero">
+ <div><div class="eyebrow" data-i="eyebrow">أناقة تتخطّى الحدود</div><h1 data-i="heroTitle">تفاصيل بسيطة.<br>حضور لا يُنسى.</h1><p data-i="heroText">اكتشف قطع رجالي مختارة بعناية، بتصميم هادئ وجودة تليق بإطلالتك اليومية.</p><a href="#products" class="btn primary" data-i="explore">اكتشف المجموعة ↙</a></div>
+ <div class="hero-visual"><img src="nour-logo.jpg" alt="NOUR premium clothing brand"><div class="seal">EST. 2026 · PREMIUM</div></div>
+</section>
+<section id="products">
+ <div class="section-head"><div><div class="eyebrow" data-i="collection">المجموعة</div><h2 data-i="productsTitle">اختيارات NOUR</h2></div><p data-i="demo">منتجات تجريبية قابلة للتعديل</p></div>
+ <div class="filters" id="filters"></div><div class="products" id="productsGrid"></div>
+</section>
+<section class="info">
+ <article><b data-i="quality">✦ اختيار بعناية</b><p data-i="qualityText">قطع أساسية بتفاصيل بسيطة وسهلة التنسيق.</p></article>
+ <article><b data-i="delivery">↗ اطلب بسهولة</b><p data-i="deliveryText">أرسل طلبك عبر واتساب لتأكيد المقاس والعنوان والتوصيل.</p></article>
+ <article><b data-i="support">♡ تواصل مباشر</b><p data-i="supportText">نتواصل معك لتأكيد تفاصيل الطلب قبل الشحن.</p></article>
+</section>
+</main>
+<footer><div class="wrap footer-row"><span>© 2026 NOUR CLOTHING BRAND</span><span data-i="footer">Style beyond borders.</span></div></footer>
+<button class="cart-fab" id="cartOpen"><span data-i="cart">السلة</span><span class="cart-count" id="cartCount">0</span></button>
+<div class="modal" id="cartModal"><div class="sheet">
+ <div class="sheet-head"><h2 data-i="cartTitle">سلة المشتريات</h2><button class="close" id="cartClose">×</button></div>
+ <div id="cartItems"></div><div class="field"><label data-i="customer">الاسم</label><input id="customerName" autocomplete="name" placeholder="اسمك"></div>
+ <div class="field"><label data-i="phone">رقم الموبايل</label><input id="customerPhone" inputmode="tel" placeholder="01xxxxxxxxx"></div>
+ <div class="field"><label data-i="address">العنوان بالتفصيل</label><input id="customerAddress" placeholder="المدينة والمنطقة والعنوان"></div>
+ <div class="field"><label data-i="size">ملاحظات / المقاس</label><input id="customerNotes" placeholder="مثال: L - أسود"></div>
+ <p id="total"></p><button class="checkout" id="whatsappOrder" data-i="checkout">إرسال الطلب على واتساب</button>
+ <p class="note" data-i="warning">تنبيه: هذه نسخة تجريبية. غيّر رقم واتساب في ملف script.js قبل استقبال طلبات حقيقية، وأضف الأسعار والمخزون الفعلي.</p>
+</div></div>
+<script src="script.js"></script>
+</body></html>
